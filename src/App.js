@@ -26,13 +26,13 @@ const routes = [
   { path: '/home', name: 'Home', Component: Home },
   { path: '/about', name: 'About', Component: About },
   { path: '/youtube', name: 'YouTube', Component: YouTube },
-  { path: '/previous-winners', name: 'P. Winners', Component: Winners },
+  { path: '/winners', name: 'P. Winners', Component: Winners },
   { path: '/regulations', name: 'Regulations', Component: Regulations },
 ];
 
 const App = () => {
 
-  const Content = ({history}) => {
+  const Content = ({ history }) => {
     return (
       <div className="page-container">
         <TransitionGroup>
@@ -80,7 +80,7 @@ const App = () => {
             <Link to="/regulations" className="header-nav-button">Regulations</Link>
           </div>
         </div>
-        <Content history={history} />
+        <Route path={'/'} component={Content} />
       </div>
     </Router>
   );
