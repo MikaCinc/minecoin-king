@@ -53,7 +53,9 @@ const App = () => {
                     render={
                       ({ match }) => (
                         <div className="page">
-                          <Component history={history} />
+                          <div className="page-inner acrylic">
+                            <Component history={history} />
+                          </div>
                         </div>
                       )
                     }
