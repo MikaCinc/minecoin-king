@@ -6,10 +6,8 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
   Link
 } from "react-router-dom";
-import history from './history';
 
 /* Animations */
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -70,7 +68,7 @@ const App = () => {
   }
 
   return (
-    <Router history={history}>
+    <Router>
       <div className="App">
         <div className="header">
           <h1 className="header-title">Minecoin King</h1>
